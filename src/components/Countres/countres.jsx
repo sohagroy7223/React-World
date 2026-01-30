@@ -9,14 +9,14 @@ const Counters = ({ countriesPromise }) => {
 
   const [visitFlags, setVisitFlags] = useState([]);
 
-  const handleCountryFlags = (country) => {
-    console.log("hello flags uel", country);
-    const flagsUrl = [...visitFlags, country];
+  const handleCountryFlags = (flag) => {
+    // console.log("hello flags uel", flag);
+    const flagsUrl = [...visitFlags, flag];
     setVisitFlags(flagsUrl);
   };
 
   const handelTravelCountry = (country) => {
-    console.log(country);
+    // console.log(country);
     const newTravelCountry = [...travelCountry, country];
     setTravelCountry(newTravelCountry);
   };
