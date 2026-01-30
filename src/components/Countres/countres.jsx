@@ -1,13 +1,13 @@
 import React, { use } from "react";
-import Country from "./country";
+import Country from "./country/country";
 const Counters = ({ countriesPromise }) => {
-  const countries = use(countriesPromise);
-  // console.log(countries);
+  const counters = use(countriesPromise);
+  // console.log(counters);
   return (
     <div>
-      <h2>traveling countries : {countries.length} </h2>
-      {countries.map((country) => (
-        <Country key={country.cca3} country={country}></Country>
+      <h3>All counters is here: {counters.length} </h3>
+      {counters.map((country) => (
+        <Country country={country}></Country>
       ))}
     </div>
   );
