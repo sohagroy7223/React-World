@@ -1,3 +1,4 @@
+import "./countres.css";
 import React, { use } from "react";
 import Country from "./country/country";
 const Counters = ({ countriesPromise }) => {
@@ -6,9 +7,11 @@ const Counters = ({ countriesPromise }) => {
   return (
     <div>
       <h3>All counters is here: {counters.length} ta </h3>
-      {counters.map((country) => (
-        <Country key={country.cca3} country={country}></Country>
-      ))}
+      <div className="counters">
+        {counters.map((country) => (
+          <Country key={country.cca3} country={country}></Country>
+        ))}
+      </div>
     </div>
   );
 };
