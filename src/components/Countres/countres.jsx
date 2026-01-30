@@ -5,9 +5,9 @@ const Counters = ({ countriesPromise }) => {
   // console.log(counters);
   return (
     <div>
-      <h3>All counters is here: {counters.length} </h3>
+      <h3>All counters is here: {counters.length} ta </h3>
       {counters.map((country) => (
-        <Country country={country}></Country>
+        <Country key={country.cca3} country={country}></Country>
       ))}
     </div>
   );
