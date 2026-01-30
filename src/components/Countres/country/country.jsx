@@ -3,7 +3,7 @@ import "./country.css";
 const Country = ({ country, handelTravelCountry, handleCountryFlags }) => {
   //   console.log(country);
   // console.log(handelTravelCountry);
-  console.log(handleCountryFlags);
+
   const [visited, setVisited] = useState(false);
 
   const handleVisited = () => {
@@ -14,6 +14,7 @@ const Country = ({ country, handelTravelCountry, handleCountryFlags }) => {
     //   setVisited(true);
     // }
     handelTravelCountry(country);
+    handleCountryFlags(country);
   };
 
   const { name, flags, capital, independent } = country;

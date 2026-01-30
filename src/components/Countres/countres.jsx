@@ -7,10 +7,12 @@ const Counters = ({ countriesPromise }) => {
 
   const [travelCountry, setTravelCountry] = useState([]);
 
-  const [visiteFlags, setVisiteFlags] = useState([]);
+  const [visitFlags, setVisitFlags] = useState([]);
 
-  const handleCountryFlags = () => {
-    console.log("hello flags uel");
+  const handleCountryFlags = (country) => {
+    console.log("hello flags uel", country);
+    const flagsUrl = [...visitFlags, country];
+    setVisitFlags(flagsUrl);
   };
 
   const handelTravelCountry = (country) => {
@@ -22,10 +24,17 @@ const Counters = ({ countriesPromise }) => {
     <div>
       <h3>All counters is here: {counters.length} ta </h3>
       <h3>traveling country: {travelCountry.length}</h3>
-      <h3>flags url: </h3>
+      <h3>
+        flags url:
+        <ol>
+          {visitFlags.map((country) => (
+            <li key={country.cca3}>{country.flags.png}</li>
+          ))}
+        </ol>
+      </h3>
       <ol>
         {travelCountry.map((country) => (
-          <li>{country.name.common}</li>
+          <li key={country.cca3}> {country.name.common}</li>
         ))}
       </ol>
       <div className="counters">
