@@ -22,9 +22,9 @@ const Counters = ({ countriesPromise }) => {
   };
   return (
     <div>
-      <h3>All counters is here: {counters.length} ta </h3>
-      <h3>traveling country: {travelCountry.length}</h3>
-      <h3>
+      <h3 className="card">All counters is here: {counters.length} ta </h3>
+      <h3 className="cards">traveling country: {travelCountry.length}</h3>
+      <h3 className="card">
         flags url:
         <ol>
           {visitFlags.map((country) => (
@@ -32,7 +32,7 @@ const Counters = ({ countriesPromise }) => {
           ))}
         </ol>
       </h3>
-      <ol>
+      <ol className="cards">
         {travelCountry.map((country) => (
           <li key={country.cca3}> {country.name.common}</li>
         ))}
