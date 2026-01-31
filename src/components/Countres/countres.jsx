@@ -24,14 +24,11 @@ const Counters = ({ countriesPromise }) => {
     <div>
       <h3 className="card">All counters is here: {counters.length} ta </h3>
       <h3 className="cards">traveling country: {travelCountry.length}</h3>
-      <h3 className="card">
-        flags url:
-        <ol>
-          {visitFlags.map((country) => (
-            <li key={country.cca3}>{country.flags.png}</li>
-          ))}
-        </ol>
-      </h3>
+      <div className="visitedFlags">
+        {visitFlags.map((flag, index) => (
+          <img key={index} src={flag}></img>
+        ))}
+      </div>
       <ol className="cards">
         {travelCountry.map((country) => (
           <li key={country.cca3}> {country.name.common}</li>

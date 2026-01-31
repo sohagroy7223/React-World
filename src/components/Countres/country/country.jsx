@@ -14,7 +14,6 @@ const Country = ({ country, handelTravelCountry, handleCountryFlags }) => {
     //   setVisited(true);
     // }
     handelTravelCountry(country);
-    handleCountryFlags(country);
   };
 
   const { name, flags, capital, independent } = country;
@@ -27,6 +26,10 @@ const Country = ({ country, handelTravelCountry, handleCountryFlags }) => {
       <p>independent : {independent ? "free" : "not free"}</p>
       <button onClick={handleVisited}>
         {visited ? "visited" : "not visited"}
+      </button>
+
+      <button onClick={() => handleCountryFlags(country.flags.png)}>
+        Add visited Flag
       </button>
     </div>
   );
